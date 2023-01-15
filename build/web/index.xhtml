@@ -1,19 +1,42 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-        <h:outputStylesheet name="css/jsfcrud.css"/>
-    </h:head>
-    <h:body>
-        Hello from Facelets
-        <br />
-        <h:link outcome="/departamento/List" value="Show All Departamento Items"/>
-        <br />
-        <h:link outcome="/empleado/List" value="Show All Empleado Items"/>
-    </h:body>
 
+    <body>
 
+        <ui:composition template="./base.xhtml">
+
+            <ui:define name="top">
+
+                <div>
+                    <h2>Empresa Vivavida</h2>
+                </div>
+
+            </ui:define>
+
+            <ui:define name="left">
+                <h:link outcome="/departamento/List" target="prin" value="Departamento"/>
+                <br />
+                <h:link outcome="/empleado/List" target="prin" value="Empleado"/>
+            </ui:define>
+
+            <ui:define name="right">
+                <A style="color: black" HREF="https://www.youtube.com/watch?v=MzdFEscIHVg"> Enlace al video con el que se baso esta practica</A>
+                <br></br>
+                <A style="color: black" HREF="https://youtu.be/Gi2jCEo1cbQ"> Enlace al video para subir el proyecto a la nube</A>
+            </ui:define>
+
+            <ui:define name="content">
+                <iframe name="prin" height="400px" width="900px"></iframe>
+            </ui:define>
+
+            <ui:define name="bottom">
+                <h1 style="color: black; text-align: center;">@Juan Guachichullca</h1>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
 </html>
-
